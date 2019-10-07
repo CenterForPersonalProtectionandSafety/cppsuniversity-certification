@@ -21,7 +21,7 @@ html, body {
 
 /********************** NAVBAR **********************/
 .navbar {
-	background: #444;
+	background: #343A40;
 	-o-transition: all .6s; -moz-transition: all .6s; -webkit-transition: all .6s; -ms-transition: all .6s; transition: all .6s;
 	backface-visibility: hidden;
 }
