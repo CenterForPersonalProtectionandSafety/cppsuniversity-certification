@@ -88,7 +88,7 @@ if($user->data()->first_login_pass_reset == 0) {
 	  </div>
 	</div>
 
-
+<?php if (checkMenu(4,$user->data()->id)) {  //Links for permission id 4 => (Tier 2 Courses) ?>
 	<!-- Tier 2 Course Modules -->
 	<div id="t2course" class="row">
 	  <div class="col-xl custom-col">
@@ -124,8 +124,9 @@ if($user->data()->first_login_pass_reset == 0) {
 	    </div>
 	  </div>
 	</div>
+<?php }  //END Tier 2 Check ?>
 
-
+<?php if (checkMenu(5,$user->data()->id)) {  //Links for permission id 5 => (Tier 3 Courses) ?>
 	<!-- Tier 3 Course Modules -->
 	<div id="t3course" class="row">
 	  <div class="col-xl custom-col">
@@ -161,7 +162,7 @@ if($user->data()->first_login_pass_reset == 0) {
 	    </div>
 	  </div>
 	</div>
-
+<?php }  //END Tier 3 Check ?>
 
 <?php  languageSwitcher();?>
 <!-- Place any per-page javascript here -->
