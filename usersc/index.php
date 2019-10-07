@@ -36,9 +36,16 @@ if($user->data()->first_login_pass_reset == 0) {
 	   <h3>WELCOME TO</h3>
 	   <h1>CERTIFICATION TRAINING</h1>
 	   <h3 class="lead pb-4">By CPPS University</h3>
+
 	   <a href="#" id="link_about" class="btn btn-md" role="button">About Us</a>
-	   <a href="#" id="tier2_link" class="btn btn-md" role="button">Tier 2 Courses</a>
-	   <a href="#" id="tier3_link" class="btn btn-md" role="button">Tier 3 Courses</a>
+
+	   <?php if (checkMenu(4,$user->data()->id)) {  //Links for permission id 4 => (Tier 2 Courses) ?>
+       <a href="#" id="tier2_link" class="btn btn-md" role="button">Tier 2 Courses</a>
+     <?php }  //END Tier 2 Check ?>
+
+     <?php if (checkMenu(5,$user->data()->id)) {  //Links for permission id 5 => (Tier 3 Courses) ?>
+	      <a href="#" id="tier3_link" class="btn btn-md" role="button">Tier 3 Courses</a>
+     <?php }  //END Tier 3 Check ?>
 	  </div>
 	</header>
 
