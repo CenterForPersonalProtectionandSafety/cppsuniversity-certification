@@ -27,9 +27,7 @@ if($user->data()->first_login_pass_reset == 0) {
   if($t3m1 && $t3m2 && $t3m3 && $t3m4 && $t3m5) {
     $t3quiz = 1;
   }
-
-
-
+  
 ?>
 	<!-- Hero Banner Welcome Section -->
 	<header id="hero-section"class="jumbotron jumbotron-fluid hero">

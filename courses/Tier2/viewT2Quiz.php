@@ -24,7 +24,6 @@ SCORM Player - Tier 3
     </div>
 </header>
 
-
 <!-- Javascript to link times to databse (ie isComplete, getTime, saveTime) -->
 <!-- Place any per-page javascript here -->
 <script>

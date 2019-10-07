@@ -10,7 +10,7 @@ SCORM Player - Tier 3
 
 
 <!-- Page Content -->
-<header id="hero-section"class="jumbotron jumbotron-fluid hero" onload="Utils.launchSCO(); return false;">
+<header id="hero-section"class="jumbotron jumbotron-fluid hero view-custom" onload="Utils.launchSCO(); return false;">
     <div class="container-fluid text-center">
       <img src="/usersc/images/cpps_white_logo_small.png" alt="..." class="view-page-logo">
       <br>
