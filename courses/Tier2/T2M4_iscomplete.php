@@ -4,11 +4,11 @@ Set complete_tier3 to YES
 */
 
 //it grabs the init file, wherever it is located relative to the parser file itself
-require_once '../users/init.php';
+require_once '../../users/init.php';
 //it instantiates the DB
 $db = DB::getInstance();
 $user_id = $user->data()->id;
-$db->update('users',$user_id,['complete_t2m1'=>1]);
+$db->update('users',$user_id,['complete_t2m4'=>1]);
 
 
 

@@ -4,14 +4,14 @@ Retrieve bookmark time
 */
 
 //it grabs the init file, wherever it is located relative to the parser file itself
-require_once '../users/init.php';
+require_once '../../users/init.php';
 //it instantiates the DB
 $db = DB::getInstance();
 $user_id = $user->data()->id;
 
 
 //get bookmark
-$myvalue = $user->data()->t2m1_bookmark;
+$myvalue = $user->data()->t2quiz_bookmark;
 return $myvalue;
 
 //save bookmark

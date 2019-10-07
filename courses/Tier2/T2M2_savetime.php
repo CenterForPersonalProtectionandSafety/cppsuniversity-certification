@@ -4,7 +4,7 @@ Save bookmark time to database
 */
 
 //it grabs the init file, wherever it is located relative to the parser file itself
-require_once '../users/init.php';
+require_once '../../users/init.php';
 //it instantiates the DB
 $db = DB::getInstance();
 $user_id = $user->data()->id;
@@ -16,7 +16,7 @@ $user_id = $user->data()->id;
 
 //save bookmark
 $myvalue = Input::get('mybookmark');
-$db->update('users',$user_id,['t2m1_bookmark'=>$myvalue]);
+$db->update('users',$user_id,['t2m2_bookmark'=>$myvalue]);
 
 //a response is sent
 //$response = ['success'=>true];
