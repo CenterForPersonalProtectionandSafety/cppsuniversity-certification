@@ -88,6 +88,7 @@ if($user->data()->first_login_pass_reset == 0) {
 	  </div>
 	</div>
 
+
 	<!-- Tier 2 Course Modules -->
 	<div id="t2course" class="row">
 	  <div class="col-xl custom-col">
@@ -116,7 +117,6 @@ if($user->data()->first_login_pass_reset == 0) {
 
             // Include Tier 2 Quiz iff completed all t2 modules
             if($t2quiz){ include $abs_us_root.$us_url_root.'courses/Tier2/cards/T2Quiz_Card.php'; }
-
 	       ?>
 	    </div>
 	    <div class="text-center">
@@ -154,7 +154,6 @@ if($user->data()->first_login_pass_reset == 0) {
 
             // Include Tier 3 Quiz iff completed all t3 modules
             if($t3quiz){ include $abs_us_root.$us_url_root.'courses/Tier3/cards/T3Quiz_Card.php'; }
-
 	       ?>
 	    </div>
 	    <div class="text-center">
