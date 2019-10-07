@@ -8,6 +8,26 @@ if($user->data()->first_login_pass_reset == 0) {
   Redirect::to($us_url_root.'usersc/user_settings.php');
 }
 
+  // Logic for checking all T2 Modules completed before showing quiz
+  if($user->data()->complete_t2m1 == 1){ $t2m1 = 1; }
+  if($user->data()->complete_t2m2 == 1){ $t2m2 = 1; }
+  if($user->data()->complete_t2m3 == 1){ $t2m3 = 1; }
+  if($user->data()->complete_t2m4 == 1){ $t2m4 = 1; }
+  if($user->data()->complete_t2m5 == 1){ $t2m5 = 1; }
+  if($t2m1 && $t2m2 && $t2m3 && $t2m4 && $t2m5) {
+    $t2quiz = 1;
+  }
+
+  // Logic for checking all T3 Modules completed before showing quiz
+  if($user->data()->complete_t3m1 == 1){ $t3m1 = 1; }
+  if($user->data()->complete_t3m2 == 1){ $t3m2 = 1; }
+  if($user->data()->complete_t3m3 == 1){ $t3m3 = 1; }
+  if($user->data()->complete_t3m4 == 1){ $t3m4 = 1; }
+  if($user->data()->complete_t3m5 == 1){ $t3m5 = 1; }
+  if($t3m1 && $t3m2 && $t3m3 && $t3m4 && $t3m5) {
+    $t3quiz = 1;
+  }
+
 ?>
 
 	<!-- Hero Banner Welcome Section -->
@@ -94,9 +114,9 @@ if($user->data()->first_login_pass_reset == 0) {
 	          //Include the Tier 2 Module 5
 	          include $abs_us_root.$us_url_root.'courses/Tier2/cards/T2M5_Card.php';
 
-            include $abs_us_root.$us_url_root.'courses/Tier2/cards/T2Quiz_Card.php';
+            // Include Tier 2 Quiz iff completed all t2 modules
+            if($t2quiz){ include $abs_us_root.$us_url_root.'courses/Tier2/cards/T2Quiz_Card.php'; }
 
-            // if($t2quiz){ include $abs_us_root.$us_url_root.'courses/Tier2/cards/T2Quiz_Card.php'; }
 	       ?>
 	    </div>
 	    <div class="text-center">
@@ -132,9 +152,8 @@ if($user->data()->first_login_pass_reset == 0) {
 	          //Include the Tier 3 Module 5
 	          include $abs_us_root.$us_url_root.'courses/Tier3/cards/T3M5_Card.php';
 
-            include $abs_us_root.$us_url_root.'courses/Tier3/cards/T3Quiz_Card.php';
-
-            // if($t3quiz){ include $abs_us_root.$us_url_root.'courses/Tier3/cards/T3Quiz_Card.php'; }
+            // Include Tier 3 Quiz iff completed all t3 modules
+            if($t3quiz){ include $abs_us_root.$us_url_root.'courses/Tier3/cards/T3Quiz_Card.php'; }
 
 	       ?>
 	    </div>
