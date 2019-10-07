@@ -35,7 +35,7 @@ if($user->data()->first_login_pass_reset == 0) {
 	<header id="hero-section"class="jumbotron jumbotron-fluid hero">
 	  <div class="container-fluid text-center">
 	   <h3>WELCOME TO</h3>
-	   <h1 class="display-3">CERTIFICATION TRAINING</h1>
+	   <h1>CERTIFICATION TRAINING</h1>
 	   <h3 class="lead pb-4">By CPPS University</h3>
 	   <a href="#" id="link_about" class="btn btn-md" role="button">About Us</a>
 	   <a href="#" id="tier2_link" class="btn btn-md" role="button">Tier 2 Courses</a>
