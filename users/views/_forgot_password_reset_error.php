@@ -19,12 +19,10 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 ?>
-<div class="w3-center">
-
-  <h2><?=lang("VER_OOPS");?></h2>
-  <div class="w3-container">
-    <button class="w3-button w3-block w3-dark-grey w3-section w3-padding" onclick="window.location.href='<?=$us_url_root?>usersc/forgot_password.php'"><?=lang("PW_RESET");?></button>
-  </div>
-  <br />
-
-</div>
+<div class="row">
+  <div class="col-sm-12">
+    <h2><?=lang("VER_OOPS");?></h2>
+    <p><a href="forgot_password.php" class="btn btn-primary"><?=lang("PW_RESET");?></a></p>
+    <br />
+  </div><!-- /.col -->
+</div><!-- /.row -->
