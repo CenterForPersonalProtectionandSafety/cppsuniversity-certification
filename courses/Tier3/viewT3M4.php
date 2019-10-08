@@ -30,7 +30,7 @@ SCORM Player - Tier 3
     function scormIsComplete() {
         //my code goes here
         jQuery.ajax({
-            url:"modules/functions/iscomplete/T3M4_iscomplete.php",
+            url:"T3M4_iscomplete.php",
             method:"POST",
             success: function() {
                 console.log('success');
@@ -46,7 +46,7 @@ SCORM Player - Tier 3
 
     function scormSaveTime(mytime) {
         jQuery.ajax({
-            url:"modules/functions/savetime/T3M4_savetime.php",
+            url:"T3M4_savetime.php",
             method:"POST",
             data:{mybookmark:mytime},
             success: function() {
@@ -61,7 +61,7 @@ SCORM Player - Tier 3
     function scormGetTime() {
         //my code goes here
         var mytime = jQuery.ajax({
-            url:"modules/functions/gettime/T3M4_gettime.php",
+            url:"T3M4_gettime.php",
             method:"POST",
             async: false,
             success: function() {
@@ -576,7 +576,7 @@ SCORM Player - Tier 3
                 initTimeout = 0;
                 timeoutErrorDisplayed = false;
                 //            var launchFileAltVal = $('launchFileAlt').value;
-                var launchFileAltVal = '../SCORM/T3M4/index_lms.html';
+                var launchFileAltVal = '../../SCORM/T3M4/index_lms.html';
                 //            var cookieNameAltVal = $('cookieNameAlt').value;
                 if(launchFileAltVal.length > 0)
                 {
