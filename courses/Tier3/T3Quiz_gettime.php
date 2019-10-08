@@ -11,7 +11,7 @@ $user_id = $user->data()->id;
 
 
 //get bookmark
-$myvalue = $user->data()->t2quiz_bookmark;
+$myvalue = $user->data()->t3quiz_bookmark;
 return $myvalue;
 
 //save bookmark

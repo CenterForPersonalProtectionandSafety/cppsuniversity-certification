@@ -8,7 +8,7 @@ require_once '../../users/init.php';
 //it instantiates the DB
 $db = DB::getInstance();
 $user_id = $user->data()->id;
-$db->update('users',$user_id,['complete_t2m3'=>1]);
+$db->update('users',$user_id,['complete_t3m3'=>1]);
 
 
 
