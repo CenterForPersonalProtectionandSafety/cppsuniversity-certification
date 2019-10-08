@@ -20,6 +20,9 @@
   //Queries for T2M5 Course
   $t2m5Complete = $db->query("SELECT id FROM users WHERE complete_t2m5 = 1",array(1))->count();
   $t2m5Incomplete = $db->query("SELECT id FROM users WHERE complete_t2m5 = 0",array(0))->count();
+  //Queries for T2Quiz Course
+  $t2quizComplete = $db->query("SELECT id FROM users WHERE complete_t2quiz = 1",array(1))->count();
+  $t2quizIncomplete = $db->query("SELECT id FROM users WHERE complete_t2quiz = 0",array(0))->count();
 
 
   //Queries for T3M1 Course
@@ -37,6 +40,9 @@
   //Queries for T3M5 Course
   $t3m5Complete = $db->query("SELECT id FROM users WHERE complete_t3m5 = 1",array(1))->count();
   $t3m5Incomplete = $db->query("SELECT id FROM users WHERE complete_t3m5 = 0",array(0))->count();
+  //Queries for T3Quiz Course
+  $t3quizComplete = $db->query("SELECT id FROM users WHERE complete_t3quiz = 1",array(1))->count();
+  $t3quizIncomplete = $db->query("SELECT id FROM users WHERE complete_t3quiz = 0",array(0))->count();
 ?>
 
 <style>
@@ -105,6 +111,17 @@
       </div>
     </a>
   </div>
+  <div class="col-lg-6">
+    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2quiz">
+      <div class="card chart">
+          <div class="card-body">
+              <h4 class="mb-3">Tier 2 Quiz </h4>
+              <!-- id should be unique -->
+              <canvas id="t2quiz-chart"></canvas>
+          </div>
+      </div>
+    </a>
+  </div>
 
   <!-- TIER 3 -->
   <div class="col-lg-6">
@@ -158,6 +175,17 @@
               <h4 class="mb-3">Tier 3 Module 5 </h4>
               <!-- id should be unique -->
               <canvas id="t3m5-chart"></canvas>
+          </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-lg-6">
+    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t3quiz">
+      <div class="card chart">
+          <div class="card-body">
+              <h4 class="mb-3">Tier 3 Quiz </h4>
+              <!-- id should be unique -->
+              <canvas id="t3quiz-chart"></canvas>
           </div>
       </div>
     </a>
@@ -298,6 +326,32 @@ $(document).ready(function() {
               responsive: true
           }
       } );
+  var ctx = document.getElementById( "t2quiz-chart" );
+      ctx.height = 125;
+      var blChart = new Chart( ctx, {
+          type: 'pie',
+          data: {
+              datasets: [ {
+                  data: [ <?=$t2quizComplete?>, <?=$t2quizIncomplete?> ],
+                  backgroundColor: [
+                                      "rgba(224, 87, 106, 1)",
+                                      "rgba(93, 225, 207, 1)"
+                                  ],
+                  hoverBackgroundColor: [
+                                      "rgba(224, 87, 106, .6)",
+                                      "rgba(93, 225, 207, .7)"
+                                  ]
+
+                              } ],
+              labels: [
+                              "Complete",
+                              "Incomplete"
+                          ]
+          },
+          options: {
+              responsive: true
+          }
+      } );
 
 
 
@@ -412,6 +466,32 @@ $(document).ready(function() {
           data: {
               datasets: [ {
                   data: [ <?=$t3m5Complete?>, <?=$t3m5Incomplete?> ],
+                  backgroundColor: [
+                                      "rgba(224, 87, 106, 1)",
+                                      "rgba(93, 225, 207, 1)"
+                                  ],
+                  hoverBackgroundColor: [
+                                      "rgba(224, 87, 106, .6)",
+                                      "rgba(93, 225, 207, .7)"
+                                  ]
+
+                              } ],
+              labels: [
+                              "Complete",
+                              "Incomplete"
+                          ]
+          },
+          options: {
+              responsive: true
+          }
+      } );
+  var ctx = document.getElementById( "t3quiz-chart" );
+      ctx.height = 125;
+      var blChart = new Chart( ctx, {
+          type: 'pie',
+          data: {
+              datasets: [ {
+                  data: [ <?=$t3quizComplete?>, <?=$t3quizIncomplete?> ],
                   backgroundColor: [
                                       "rgba(224, 87, 106, 1)",
                                       "rgba(93, 225, 207, 1)"

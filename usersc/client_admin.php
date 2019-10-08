@@ -81,6 +81,10 @@ ini_set('memory_limit','1024M');
       $path = usView('_t2m4_list.php');
       include($path);
       break;
+    case "t2quiz":
+      $path = usView('_t2quiz_list.php');
+      include($path);
+      break;
     case "t3m1":
       $path = usView('_t3m1_list.php');
       include($path);
@@ -99,6 +103,10 @@ ini_set('memory_limit','1024M');
       break;
     case "t3m5":
       $path = usView('_t3m4_list.php');
+      include($path);
+      break;
+    case "t3quiz":
+      $path = usView('_t3quiz_list.php');
       include($path);
       break;
     case "upload":
