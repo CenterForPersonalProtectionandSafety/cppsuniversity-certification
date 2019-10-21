@@ -50,7 +50,7 @@
 </style>
 
   <!-- TIER 2 -->
-  <div class="col-lg-6">
+  <div class="row">
     <h4>Tier 2</h4></br><hr>
   </div>
   <div class="col-lg-6">
@@ -122,7 +122,7 @@
 
 
   <!-- TIER 3 -->
-  <div class="col-lg-6">
+  <div class="row">
     <h4>Tier 3</h4></br><hr>
   </div>
   <div class="col-lg-6">
