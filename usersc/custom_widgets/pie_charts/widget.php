@@ -1,6 +1,6 @@
 <!-- This is an example widget file.  It will be included on the statistics page of the Dashboard. -->
 <h4>Courses Completed</h4></br><hr>
-<div class="row">
+<!-- <div class="row"> -->
 
 <!-- Do any php that needs to happen. You already have access to the db -->
 <?php
@@ -40,143 +40,137 @@
 ?>
 
 <style>
-
 .chart:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition-timing-function: ease;
   transition: 0.5s;
 }
-
 </style>
-<!-- TIER 2 -->
-<div class="row">
-  <div class="col-lg-6">
-    <h4>Tier-2</h4></br><hr>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-6">
-    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m1">
-      <div class="card chart">
-          <div class="card-body">
-              <h4 class="mb-3">Tier 2 Module 1 </h4>
-              <!-- id should be unique -->
-              <canvas id="t2m1-chart"></canvas>
-          </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-lg-6">
-    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m2">
-      <div class="card chart">
-          <div class="card-body">
-              <h4 class="mb-3">Tier 2 Module 2 </h4>
-              <!-- id should be unique -->
-              <canvas id="t2m2-chart"></canvas>
-          </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-lg-6">
-    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m3">
-      <div class="card chart">
-          <div class="card-body">
-              <h4 class="mb-3">Tier 2 Module 3 </h4>
-              <!-- id should be unique -->
-              <canvas id="t2m3-chart"></canvas>
-          </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-lg-6">
-    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m4">
-      <div class="card chart">
-          <div class="card-body">
-              <h4 class="mb-3">Tier 2 Module 4 </h4>
-              <!-- id should be unique -->
-              <canvas id="t2m4-chart"></canvas>
-          </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-lg-6">
-    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m5">
-      <div class="card chart">
-          <div class="card-body">
-              <h4 class="mb-3">Tier 2 Module 5 </h4>
-              <!-- id should be unique -->
-              <canvas id="t2m5-chart"></canvas>
-          </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-lg-6">
-    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2quiz">
-      <div class="card chart">
-          <div class="card-body">
-              <h4 class="mb-3">Tier 2 Quiz </h4>
-              <!-- id should be unique -->
-              <canvas id="t2quiz-chart"></canvas>
-          </div>
-      </div>
-    </a>
-  </div>
-</div>
 
+
+  <!-- TIER 2 -->
+  <div class="row">
+    <div class="col-lg-6">
+      <h4>Tier-2</h4></br><hr>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m1">
+        <div class="card chart">
+          <div class="card-body">
+            <h4 class="mb-3">Tier 2 Module 1 </h4>
+            <canvas id="t2m1-chart"></canvas>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-6">
+      <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m2">
+        <div class="card chart">
+          <div class="card-body">
+            <h4 class="mb-3">Tier 2 Module 2 </h4>
+            <canvas id="t2m2-chart"></canvas>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-6">
+      <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m3">
+        <div class="card chart">
+          <div class="card-body">
+            <h4 class="mb-3">Tier 2 Module 3 </h4>
+            <canvas id="t2m3-chart"></canvas>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-6">
+      <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m4">
+        <div class="card chart">
+          <div class="card-body">
+            <h4 class="mb-3">Tier 2 Module 4 </h4>
+            <canvas id="t2m4-chart"></canvas>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-6">
+      <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m5">
+        <div class="card chart">
+          <div class="card-body">
+            <h4 class="mb-3">Tier 2 Module 5 </h4>
+            <canvas id="t2m5-chart"></canvas>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-6">
+      <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2quiz">
+        <div class="card chart">
+          <div class="card-body">
+            <h4 class="mb-3">Tier 2 Quiz </h4>
+            <canvas id="t2quiz-chart"></canvas>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- TIER 3 -->
   <div class="row">
     <div class="col-lg-6">
       <h4>Tier-3</h4></br><hr>
     </div>
   </div>
-  <div class="row">
-  <!-- TIER 3 -->
-  <div class="col-lg-6">
-    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t3m1">
-      <div class="card chart">
-          <div class="card-body">
-              <h4 class="mb-3">Tier 3 Module 1 </h4>
-              <!-- id should be unique -->
-              <canvas id="t3m1-chart"></canvas>
-          </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-lg-6">
-    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t3m2">
-      <div class="card chart">
-          <div class="card-body">
-              <h4 class="mb-3">Tier 3 Module 2 </h4>
-              <!-- id should be unique -->
-              <canvas id="t3m2-chart"></canvas>
-          </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-lg-6">
-    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t3m3">
-      <div class="card chart">
-          <div class="card-body">
-              <h4 class="mb-3">Tier 3 Module 3 </h4>
-              <!-- id should be unique -->
-              <canvas id="t3m3-chart"></canvas>
-          </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-lg-6">
-    <a href="<?=$us_url_root?>usersc/client_admin.php?view=t3quiz">
-      <div class="card chart">
-          <div class="card-body">
-              <h4 class="mb-3">Tier 3 Quiz </h4>
-              <!-- id should be unique -->
-              <canvas id="t3quiz-chart"></canvas>
-          </div>
-      </div>
-    </a>
-  </div>
-</div>
 
-</div> <!-- end of widget -->
+  <div class="row">
+    <div class="col-lg-6">
+      <a href="<?=$us_url_root?>usersc/client_admin.php?view=t3m1">
+        <div class="card chart">
+          <div class="card-body">
+            <h4 class="mb-3">Tier 3 Module 1 </h4>
+            <canvas id="t3m1-chart"></canvas>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-6">
+      <a href="<?=$us_url_root?>usersc/client_admin.php?view=t3m2">
+        <div class="card chart">
+          <div class="card-body">
+            <h4 class="mb-3">Tier 3 Module 2 </h4>
+            <canvas id="t3m2-chart"></canvas>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-6">
+      <a href="<?=$us_url_root?>usersc/client_admin.php?view=t3m3">
+        <div class="card chart">
+          <div class="card-body">
+            <h4 class="mb-3">Tier 3 Module 3 </h4>
+            <canvas id="t3m3-chart"></canvas>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-6">
+      <a href="<?=$us_url_root?>usersc/client_admin.php?view=t3quiz">
+        <div class="card chart">
+          <div class="card-body">
+            <h4 class="mb-3">Tier 3 Quiz </h4>
+            <canvas id="t3quiz-chart"></canvas>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+<!-- </div> -->
+
+<!-- end of widget -->
 <!-- Put any javascript here -->
 <script type="text/javascript">
 $(document).ready(function() {
