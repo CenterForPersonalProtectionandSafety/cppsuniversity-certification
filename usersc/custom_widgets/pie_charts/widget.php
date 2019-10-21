@@ -51,7 +51,7 @@
 <!-- TIER 2 -->
 <div class="row">
   <div class="col-lg-6">
-    <h4>Tier 2</h4></br><hr>
+    <h4>Tier-2</h4></br><hr>
   </div>
 </div>
 <div class="row">
@@ -125,7 +125,7 @@
 
   <div class="row">
     <div class="col-lg-6">
-      <h4>Tier 3</h4></br><hr>
+      <h4>Tier-3</h4></br><hr>
     </div>
   </div>
   <div class="row">
