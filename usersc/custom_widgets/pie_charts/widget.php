@@ -1,6 +1,6 @@
 <!-- This is an example widget file.  It will be included on the statistics page of the Dashboard. -->
-<h4>Courses Completed</h4></br><hr>
-<!-- <div class="row"> -->
+<h4>Courses Completed</h4></br>
+
 
 <!-- Do any php that needs to happen. You already have access to the db -->
 <?php
@@ -51,7 +51,7 @@
   <!-- TIER 2 -->
   <div class="row">
     <div class="col-lg-6">
-      <h4>Tier-2</h4></br><hr>
+      <h4>Tier-2</h4></br>
     </div>
   </div>
 
@@ -121,7 +121,7 @@
   <!-- TIER 3 -->
   <div class="row">
     <div class="col-lg-6">
-      <h4>Tier-3</h4></br><hr>
+      <h4>Tier-3</h4></br>
     </div>
   </div>
 
@@ -168,7 +168,7 @@
     </div>
   </div>
 
-<!-- </div> -->
+
 
 <!-- end of widget -->
 <!-- Put any javascript here -->
