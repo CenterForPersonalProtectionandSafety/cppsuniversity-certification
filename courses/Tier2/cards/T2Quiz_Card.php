@@ -10,7 +10,7 @@ BL Module
         <div class="front" style="background-image: url('/usersc/images/modules/t2quiz.png')">
         <?php } ?>
         <?php if ($user->data()->complete_t2quiz == 1){ ?>
-        <div class="front" style="background-image: url('/usersc/images/modules/qt2uiz_complete.png')">
+        <div class="front" style="background-image: url('/usersc/images/modules/t2quiz_complete.png')">
         <?php } ?>
             <div class="inner">
                 <h2>TIER 2 QUIZ</h2>
