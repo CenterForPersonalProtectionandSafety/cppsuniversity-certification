@@ -7,10 +7,10 @@ BL Module
     <input type="checkbox" id="card3" class="more" aria-hidden="true">
     <div class="content">
         <?php if ($user->data()->complete_t2m3 == 0){ ?>
-        <div class="front" style="background-image: url('/usersc/images/modules/hostage.png')">
+        <div class="front" style="background-image: url('/usersc/images/modules/t2m3.png')">
         <?php } ?>
         <?php if ($user->data()->complete_t2m3 == 1){ ?>
-        <div class="front" style="background-image: url('/usersc/images/modules/hostage_completed.png')">
+        <div class="front" style="background-image: url('/usersc/images/modules/t2m3_complete.png')">
         <?php } ?>
             <div class="inner">
                 <h2>Module 3</h2>

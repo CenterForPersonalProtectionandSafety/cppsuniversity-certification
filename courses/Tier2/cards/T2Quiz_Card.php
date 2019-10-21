@@ -7,10 +7,10 @@ BL Module
     <input type="checkbox" id="card6" class="more" aria-hidden="true">
     <div class="content">
         <?php if ($user->data()->complete_t2quiz == 0){ ?>
-        <div class="front" style="background-image: url('/usersc/images/modules/quiz.png')">
+        <div class="front" style="background-image: url('/usersc/images/modules/t2quiz.png')">
         <?php } ?>
         <?php if ($user->data()->complete_t2quiz == 1){ ?>
-        <div class="front" style="background-image: url('/usersc/images/modules/quiz_completed.png')">
+        <div class="front" style="background-image: url('/usersc/images/modules/qt2uiz_complete.png')">
         <?php } ?>
             <div class="inner">
                 <h2>TIER 2 QUIZ</h2>
