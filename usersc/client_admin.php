@@ -101,10 +101,10 @@ ini_set('memory_limit','1024M');
       $path = usView('_t3quiz_list.php');
       include($path);
       break;
-    case "upload":
-      $path = usView('_admin_upload.php');
-      include($path);
-      break;
+    // case "upload":
+    //   $path = usView('_admin_upload.php');
+    //   include($path);
+    //   break;
 
 
     default:
