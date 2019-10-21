@@ -7,13 +7,13 @@ BL Module
     <input type="checkbox" id="card8" class="more" aria-hidden="true">
     <div class="content">
         <?php if ($user->data()->complete_t3m2 == 0){ ?>
-        <div class="front" style="background-image: url('/usersc/images/modules/temp.png')">
+        <div class="front" style="background-image: url('/usersc/images/modules/placeholder.png')">
         <?php } ?>
         <?php if ($user->data()->complete_t3m2 == 1){ ?>
-        <div class="front" style="background-image: url('/usersc/images/modules/temp.png')">
+        <div class="front" style="background-image: url('/usersc/images/modules/placeholder.png')">
         <?php } ?>
             <div class="inner">
-                <h2>Module 2</h2>
+                <h2></h2>
                 <label for="card8" class="button" aria-hidden="true">
                     Details
                 </label>
