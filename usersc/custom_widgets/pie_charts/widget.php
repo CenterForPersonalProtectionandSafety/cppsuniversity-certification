@@ -48,8 +48,11 @@
 }
 
 </style>
-  <h4>Tier 2</h4></br><hr>
+
   <!-- TIER 2 -->
+  <div class="col-lg-6">
+    <h4>Tier 2</h4></br><hr>
+  </div>
   <div class="col-lg-6">
     <a href="<?=$us_url_root?>usersc/client_admin.php?view=t2m1">
       <div class="card chart">
@@ -117,9 +120,11 @@
     </a>
   </div>
 
-  <h4>Tier 3</h4></br><hr>
 
   <!-- TIER 3 -->
+  <div class="col-lg-6">
+    <h4>Tier 3</h4></br><hr>
+  </div>
   <div class="col-lg-6">
     <a href="<?=$us_url_root?>usersc/client_admin.php?view=t3m1">
       <div class="card chart">
