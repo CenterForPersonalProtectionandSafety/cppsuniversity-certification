@@ -23,7 +23,7 @@ BL Module
             <div class="inner">
                 <div class="description">
                   <h4>Module 3</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p>Course Demo</p>
                 </div>
                 <label for="card9" class="button return" aria-hidden="true">
                     <i class="fa fa-arrow-left"></i>
