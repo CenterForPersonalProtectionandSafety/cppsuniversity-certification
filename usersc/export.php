@@ -15,7 +15,7 @@ if(isset($_POST["Export"])){
   $output = fopen("php://output", "w");
 
   //Set Headers of Columns
-  fputcsv($output, array('Name', 'Email', 'Last-Sign-In', 'T2M1', 'T2M2', 'T2M3', 'T2M4', 'T2M5', 'T3M1', 'T3M2', 'T3M3', 'T3M4', 'T3M5'));
+  fputcsv($output, array('Name', 'Email', 'Last-Sign-In', 'T2M1', 'T2M2', 'T2M3', 'T2M4', 'T2M5', 'T2Quiz', 'T3M1', 'T3M2', 'T3M3', 'T3Quiz'));
 
   //Run Query
   $db = DB::getInstance();
@@ -55,6 +55,12 @@ if(isset($_POST["Export"])){
       $t2m5 = "Complete";
     }
 
+    if($person->complete_t2quiz==0){
+      $t2quiz = "Incomplete";
+    }else {
+      $t2quiz = "Complete";
+    }
+
     if($person->complete_t3m1==0){
       $t3m1 = "Incomplete";
     }else {
@@ -73,19 +79,14 @@ if(isset($_POST["Export"])){
       $t3m3 = "Complete";
     }
 
-    if($person->complete_t3m4==0){
-      $t3m4 = "Incomplete";
+    if($person->complete_t3quiz==0){
+      $t3quiz = "Incomplete";
     }else {
-      $t3m4 = "Complete";
+      $t3quiz = "Complete";
     }
 
-    if($person->complete_t3m5==0){
-      $t3m5 = "Incomplete";
-    }else {
-      $t3m5 = "Complete";
-    }
 
-    fputcsv($output, array($person->fname . " " . $person->lname, $person->email, $person->last_login, $t2m1, $t2m2, $t2m3, $t2m4, $t2m5, $t3m1, $t3m2, $t3m3, $t3m4, $t3m5));
+    fputcsv($output, array($person->fname . " " . $person->lname, $person->email, $person->last_login, $t2m1, $t2m2, $t2m3, $t2m4, $t2m5, $t2quiz, $t3m1, $t3m2, $t3m3, $t3quiz));
   }
 
   fclose($output);
