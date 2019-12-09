@@ -23,6 +23,7 @@
                 <h1>Manage Users</h1>
             </div>
         </div>
+
         <div class="row">
             <div class="col-xs-12">
                 <div class="alluinfo">&nbsp;</div>
@@ -32,7 +33,7 @@
                             <tr>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Tier 3 Module 5</th>
+                                <th>Tier 2 Quiz</th>
 
                             </tr>
                         </thead>
@@ -44,7 +45,7 @@
                             <tr>
                                 <td><?=$v1->fname?> <?=$v1->lname?></td>
                                 <td><?=$v1->email?></td>
-                                <td><?php if($v1->complete_t3m5==0) {?> <p>incomplete</p> <?php } else {?> <p>complete</p> <?php }?></td>
+                                <td><?php if($v1->complete_t3quiz==0) {?> <p>incomplete</p> <?php } else {?> <p>complete</p> <?php }?></td>
                             </tr>
                             <?php } ?>
                         </tbody>
