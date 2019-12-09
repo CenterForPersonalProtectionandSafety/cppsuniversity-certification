@@ -15,44 +15,33 @@
   $userData = $learners_query->results();
 ?>
 
-<div id="page-wrapper">
-    <div class="container">
-        <!-- Page Heading -->
-        <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <h1>Manage Users</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="alluinfo">&nbsp;</div>
-                <div class="allutable">
-                    <table id="paginate" class='table table-hover table-list-search'>
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Tier 2 Module 4</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            //Cycle through users
-                            foreach ($userData as $v1) {
-                            ?>
-                            <tr>
-                                <td><?=$v1->fname?> <?=$v1->lname?></td>
-                                <td><?=$v1->email?></td>
-                                <td><?php if($v1->complete_t2m4==0) {?> <p>incomplete</p> <?php } else {?> <p>complete</p> <?php }?></td>
-                            </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+  <h2>Manage Tier 2</h2>
+  <hr />
+  <div class="alluinfo">&nbsp;</div>
+  <div class="table-responsive">
+    <table id="paginate" class='table table-hover'>
+      <thead class="thead-light">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Tier 2 Module 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        //Cycle through users
+        foreach ($userData as $v1) {
+          ?>
+          <tr>
+            <td><?=$v1->fname?> <?=$v1->lname?></td>
+            <td><?=$v1->email?></td>
+            <td><?php if($v1->complete_t2m4==0) {?> <p>incomplete</p> <?php } else {?> <p>complete</p> <?php }?></td>
+          </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 
@@ -61,9 +50,8 @@
 <?php require_once $abs_us_root.$us_url_root.'users/includes/page_footer.php'; // the final html footer copyright row + the external js calls ?>
 
 <!-- Place any per-page javascript here -->
-<script src="../users/js/pagination/jquery.dataTables.js" type="text/javascript"></script>
-<script src="../users/js/pagination/dataTables.js" type="text/javascript"></script>
-<!-- <script>
+<script src="../users/js/pagination/datatables.min.js" type="text/javascript"></script>
+<script>
     $(document).ready(function() {
         $('#paginate').DataTable({"pageLength": 25,"aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]], "aaSorting": []});
 
@@ -76,7 +64,7 @@
             $('.pwpopover').popover('hide');
         });
     });
-</script> -->
+</script>
 
 <?php if($settings->auto_assign_un==0) { ?>
 <script type="text/javascript">

@@ -192,46 +192,40 @@ if (!empty($_POST)) {
   <!--  Add checkMenu(X,$user->data()->id) ||  with proper permission id value-->
   <?php if (checkMenu(3,$user->data()->id)){ ?>
 
-  <div class="container">
-    <h2>View Users</h2>
-    <?=resultBlock($errors,$successes);?>
-    <hr />
-    <div class="alluinfo">&nbsp;</div>
-    <div class="table-responsive">
-      <table id="paginate" class='table table-hover'>
-        <thead class="thead-light">
-          <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-          //Cycle through users
-          foreach ($userData as $v1) {
-            ?>
+    <div class="container">
+      <h2>View Users</h2>
+      <?=resultBlock($errors,$successes);?>
+      <hr />
+      <div class="alluinfo">&nbsp;</div>
+      <div class="table-responsive">
+        <table id="paginate" class='table table-hover'>
+          <thead class="thead-light">
             <tr>
-              <td><?=$v1->id?></td>
-              <td><?=$v1->username?></td>
-              <td><?=$v1->fname?> <?=$v1->lname?></td>
-              <td><?=$v1->email?></td>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+          <?php foreach ($userData as $v1) { ?>
+            <tr>
+              <td><a class="nounderline" href='client_admin.php?view=user&id=<?=$v1->id?>'><?=$v1->id?></a></td>
+              <td><a class="nounderline" href='client_admin.php?view=user&id=<?=$v1->id?>'><?=$v1->username?></a></td>
+              <td><a class="nounderline" href='client_admin.php?view=user&id=<?=$v1->id?>'><?=$v1->fname?> <?=$v1->lname?></a></td>
+              <td><a class="nounderline" href='client_admin.php?view=user&id=<?=$v1->id?>'><?=$v1->email?></a></td>
             </tr>
           <?php } ?>
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <!-- <button class="btn btn-secondary btn-lg pull-right" data-toggle="modal" data-target="#adduser">
-      <i class="fa fa-plus"></i> Manually Add User
-    </button> -->
-  </div>
 
   <?php }else { include $abs_us_root.$us_url_root.'usersc/includes/warning.php'; } ?>
 
 
-      <script type="text/javascript" src="js/pagination/datatables.min.js"></script>
-      <script src="js/jwerty.js"></script>
+      <script type="text/javascript" src="../users/js/pagination/datatables.min.js"></script>
+      <script src="../users/js/jwerty.js"></script>
 
       <script>
       $(document).ready(function() {
