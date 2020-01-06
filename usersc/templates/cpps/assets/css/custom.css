@@ -157,8 +157,8 @@ html, body {
   padding-bottom: 6em;
   background-color: #f9f9f9;
   margin: 0;
-  height: 94vh;
-  overflow: hidden
+  /* height: 94vh; */
+  /* overflow: hidden; */
 }
 
 .settings-hero label {
@@ -184,6 +184,18 @@ html, body {
   }
   .settings-hero .sec-btn{
     margin-top: 1em;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .settings-hero h1{
+    font-size: 15px;
+  }
+  .settings-hero label{
+    font-size: 12px;
+  }
+  .settings-hero .sec-btn{
+    margin-top: .5em;
   }
 }
 /********************** USER SETTINGS UPDATE END **********************/
