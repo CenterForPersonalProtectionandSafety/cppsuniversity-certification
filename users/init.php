@@ -26,8 +26,8 @@ require_once $abs_us_root.$us_url_root.'users/helpers/helpers.php';
 $GLOBALS['config'] = array(
 	'mysql'      => array(
 		'host'         => 'localhost',
-		'username'     => 'root',
-		'password'     => 'CPPSdev1!certification',
+		'username'     => 'USERNAME GOES HERE',
+		'password'     => 'PASSWORD GOES HERE',
 		'db'           => 'cpps_cert_us5',
 		),
 	'remember'        => array(
@@ -40,23 +40,6 @@ $GLOBALS['config'] = array(
 	)
 );
 
-// // Localhost
-// $GLOBALS['config'] = array(
-// 	'mysql'      => array(
-// 		'host'         => 'localhost',
-// 		'username'     => 'cpps',
-// 		'password'     => 'CPPSdev1!',
-// 		'db'           => 'cpps_cert_us5',
-// 		),
-// 	'remember'        => array(
-// 	  'cookie_name'   => 'pmqesoxiw318374csb',
-// 	  'cookie_expiry' => 604800  //One week, feel free to make it longer
-// 	),
-// 	'session' => array(
-// 	  'session_name' => 'user',
-// 	  'token_name' => 'token',
-// 	)
-// );
 
 //If you changed your UserSpice or UserCake database prefix
 //put it here.
